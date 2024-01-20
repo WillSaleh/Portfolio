@@ -91,18 +91,16 @@
 /* Header */
 .header {
     position: fixed;
+    width: 100%;
+    background-color: transparent;
     top: 0;
     left: 0;
-    width: 100%;
-    background: transparent;
     z-index: 100;
 }
 
-.nav-container, .nav__menu {
-    height: 3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav__logo {
@@ -121,15 +119,15 @@
 /* Navigation for Mobile Devices */
 @media screen and (max-width: 1023px) {
     .nav__menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: gray;
-        width: 100%;
-        padding-block: 4rem;
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        transition: top .4s;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      background-color: hsla(0, 0%, 0%, .3);
+      width: 100%;
+      padding-block: 4rem;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      transition: top .4s;
     }
 }
 
@@ -138,4 +136,20 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: hsl(0, 0%, 95%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.show-menu {
+  top: 0;
 }
