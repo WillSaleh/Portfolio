@@ -40,3 +40,11 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
+
+const sr = ScrollReveal ({
+    origin: 'top', distance: '60px', duration: 3000, delay: 400,
+})
+
+sr.reveal('.home__data')
+sr.reveal('.about__data', {origin: 'right'})
+sr.reveal('.about__image, .contact__data', {origin: 'left'})
