@@ -46,5 +46,6 @@ const sr = ScrollReveal ({
 })
 
 sr.reveal('.home__data')
-sr.reveal('.about__data', {origin: 'right'})
-sr.reveal('.about__image, .contact__data', {origin: 'left'})
+sr.reveal('.about__data, .contact__right', {origin: 'right'})
+sr.reveal('.about__image, .contact__data, .contact__left', {origin: 'left'})
+sr.reveal('.projects__card', {origin: 'bottom'})
